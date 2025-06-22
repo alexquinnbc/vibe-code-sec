@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vibe Check: Secure Vibe Coding</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">TheVibeCheck.io</div>
+        <nav>
+            <a href="#guide">The Guide</a>
+            <a href="#tools">Tools</a>
+            <a href="#checklists">Checklists</a>
+            <a href="#resources">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Embrace the Vibe. Tame the Chaos.</h1>
+            <p class="subtitle">The definitive security guide and toolkit for developers who code with intuition.</p>
+            <a href="#guide" class="cta-button">Start the Vibe Check</a>
+        </section>
+
+        <!-- THE GUIDE SECTION -->
+        <section id="guide" class="content-section">
+            <h2>The Secure Vibe Coding Guide</h2>
+            <article class="guide-item">
+                <h3>1. The Inherent Risks</h3>
+                <p>When the vibe is the only guide, critical details can be missed. Here are the most common risks.</p>
+                <div class="card-container">
+                    <div class="card"><h4>Insecure Defaults</h4><p>"I'll just make this S3 bucket public for the demo..."</p></div>
+                    <div class="card"><h4>Injection Vulnerabilities</h4><p>"SELECT * FROM users WHERE name = '...' felt simple."</p></div>
+                    <div class="card"><h4>Hardcoded Secrets</h4><p>An admin API key in the frontend code to get a feature working.</p></div>
+                    <div class="card"><h4>Sensitive Data Exposure</h4><p>console.log(userObject), accidentally logging session tokens.</p></div>
+                </div>
+            </article>
+            <article class="guide-item">
+                <h3>2. The Secure Vibe Framework</h3>
+                <p>Practical, lightweight guidelines to keep your vibes secure and sustainable.</p>
+                <div class="card-container">
+                    <div class="card accent"><h4>The 60-Second Vibe Check</h4><p>A lightweight threat model: What data? Who accesses? What's the worst that can happen?</p></div>
+                    <div class="card accent"><h4>Automate Your Guardrails</h4><p>Your code is vibes, your CI/CD is the bouncer. Use SAST, linters, and secret scanners.</p></div>
+                    <div class="card accent"><h4>Just-in-Time Docs</h4><p>Don't write novels. Explain the "why" in comments. Use self-documenting code.</p></div>
+                    <div class="card accent"><h4>Isolate the Vibes</h4><p>Use feature flags to test experimental code safely in production.</p></div>
+                </div>
+            </article>
+        </section>
+
+        <!-- INTERACTIVE TOOLS SECTION -->
+        <section id="tools" class="content-section">
+            <h2>Developer Toolkit</h2>
+            <div class="tool-container">
+                <div class="tool">
+                    <h3>Pre-Code: The 60-Second Vibe Check</h3>
+                    <p>Answer these before you code. It builds security muscle memory.</p>
+                    <div id="vibe-check-form">
+                        <label>What data am I touching? (e.g., PII, payment info)</label>
+                        <input type="text" id="data-type" placeholder="Public user profiles">
+                        <label>Who can access this? (e.g., public, users, admins)</label>
+                        <input type="text" id="access-level" placeholder="Authenticated users">
+                        <label>Worst-case scenario if this fails?</label>
+                        <input type="text" id="worst-case" placeholder="Leaked user emails">
+                        <button id="vibe-check-submit">Get Feedback</button>
+                        <p id="vibe-check-result" class="tool-result"></p>
+                    </div>
+                </div>
+                <div class="tool">
+                    <h3>During-Code: Quick Secret Scanner</h3>
+                    <p>Paste a code snippet to check for common secret patterns before you commit.</p>
+                    <textarea id="secret-scanner-input" rows="6" placeholder="Paste your code here..."></textarea>
+                    <button id="secret-scan-button">Scan for Secrets</button>
+                    <p id="secret-scan-result" class="tool-result"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE CHECKLISTS SECTION -->
+        <section id="checklists" class="content-section">
+            <h2>Pre-Flight Checklists</h2>
+            <div class="checklist-container">
+                <h3>Ready to Vibe?</h3>
+                <label class="checklist-item"><input type="checkbox">Did a 1-minute "Security Vibe Check"?</label>
+                <label class="checklist-item"><input type="checkbox">Is experimental code behind a feature flag?</label>
+                <label class="checklist-item"><input type="checkbox">No hardcoded secrets, keys, or passwords?</label>
+                <label class="checklist-item"><input type="checkbox">Ran the auto-linter/formatter?</label>
+                <label class="checklist-item"><input type="checkbox">Wrote a comment for the "why" of complex code?</label>
+                <label class="checklist-item"><input type="checkbox">Does the code handle bad input without crashing?</label>
+            </div>
+        </section>
+
+        <!-- RESOURCES SECTION -->
+        <section id="resources" class="content-section">
+            <h2>References & Further Reading</h2>
+            <ul class="resource-list">
+                <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10</a> - The bible of web security risks.</li>
+                <li><a href="https://snyk.io/" target="_blank">Snyk</a> - Tool for dependency and code scanning (SAST).</li>
+                <li><a href="https://www.launchdarkly.com/" target="_blank">LaunchDarkly</a> - Industry standard for feature flags.</li>
+                <li><a href="https://prettier.io/" target="_blank">Prettier</a> - An opinionated code formatter.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Vibe On, Safely. | A Project by a Fellow Developer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
